@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://f3tfsotbsaqp"]
+
+[ext_resource type="Script" path="res://scripts/hand_r.gd" id="1_jlr0o"]
+[ext_resource type="Texture2D" uid="uid://41uvo1dmr8ij" path="res://scenes/Male_1_back-1063781907.png" id="2_ntm6x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cycio"]
+size = Vector2(117, 117)
+
+[node name="handR" type="CharacterBody2D"]
+script = ExtResource("1_jlr0o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_cycio")
+
+[node name="handR" type="Sprite2D" parent="."]
+position = Vector2(-18, -33)
+rotation = 4.71239
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_ntm6x")

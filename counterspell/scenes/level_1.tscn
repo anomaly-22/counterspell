@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://jscdk1qwym60"]
+
+[ext_resource type="PackedScene" uid="uid://cnbnoltmfv62j" path="res://scenes/handR.tscn" id="1_avy3d"]
+[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_e7sra"]
+[ext_resource type="Texture2D" uid="uid://8ayjxmiyik7c" path="res://scenes/water.jpg" id="1_ifmiu"]
+[ext_resource type="PackedScene" uid="uid://cjaw8ep6jg0vq" path="res://scenes/dish.tscn" id="2_jm1dr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdvby"]
+size = Vector2(1385, 35)
+
+[node name="dishes" type="Node2D"]
+script = ExtResource("1_e7sra")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 342)
+scale = Vector2(0.44, 0.450891)
+texture = ExtResource("1_ifmiu")
+
+[node name="dish" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(647, 330)
+character = NodePath("../handR")
+
+[node name="dish6" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(571, 138)
+character = NodePath("../handR")
+
+[node name="dish7" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(119, 158)
+character = NodePath("../handR")
+
+[node name="dish8" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(919, 208)
+character = NodePath("../handR")
+
+[node name="dish2" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(929, 436)
+character = NodePath("../handR")
+
+[node name="dish3" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(373, 219)
+character = NodePath("../handR")
+
+[node name="dish4" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(579, 522)
+character = NodePath("../handR")
+
+[node name="dish5" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_jm1dr")]
+position = Vector2(283, 448)
+character = NodePath("../handR")
+
+[node name="handR" parent="." instance=ExtResource("1_avy3d")]
+position = Vector2(254, 278)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(632, 14.5)
+shape = SubResource("RectangleShape2D_cdvby")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(563, 627)
+shape = SubResource("RectangleShape2D_cdvby")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(20, 486)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_cdvby")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1138, 521)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_cdvby")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqud0g3ixs6qq"]
+
+[ext_resource type="Script" path="res://scenes/level_2.gd" id="1_2m1pq"]
+[ext_resource type="Texture2D" uid="uid://bky4qewwt5hbu" path="res://scenes/bigstock-Grey-Carpet-Texture-Close-Up-290044018-915933840.jpg" id="2_86uhx"]
+[ext_resource type="Texture2D" uid="uid://cb8kvkeg7oewy" path="res://sprites/clothes.png" id="2_mm6rf"]
+[ext_resource type="PackedScene" uid="uid://f3tfsotbsaqp" path="res://scenes/pusher.tscn" id="3_gtpyl"]
+[ext_resource type="Texture2D" uid="uid://bhhr4pppewlx5" path="res://scenes/d9846139f46477e0269d85bee77276fb-2715448642-removebg-preview.png" id="3_vrw3q"]
+[ext_resource type="Texture2D" uid="uid://cru68folx6mks" path="res://scenes/a2b7cefb441c867735c19f1d7f542f72-304953887.png" id="4_5wbym"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ren6"]
+radius = 77.1172
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi4qv"]
+size = Vector2(1296, 123)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tegy"]
+radius = 56.0773
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mbf8"]
+radius = 53.451
+
+[node name="level 2" type="Node2D"]
+script = ExtResource("1_2m1pq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(566, 386)
+texture = ExtResource("2_86uhx")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(-1353, -506)
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(2148, 657.25)
+scale = Vector2(0.35, 0.597054)
+texture = ExtResource("2_mm6rf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2146, 677)
+shape = SubResource("CircleShape2D_8ren6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(586, 656)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-28, 91)
+shape = SubResource("RectangleShape2D_qi4qv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(674, -283)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_qi4qv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-9, -727)
+shape = SubResource("RectangleShape2D_qi4qv")
+
+[node name="handR" parent="." instance=ExtResource("3_gtpyl")]
+position = Vector2(498, 562)
+scale = Vector2(0.66, 0.66)
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(-1589, -524)
+rotation = 0.127409
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+position = Vector2(2148, 657.25)
+rotation = 0.837758
+scale = Vector2(0.23, 0.392)
+texture = ExtResource("2_mm6rf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2(2136.55, 662.894)
+rotation = 0.120428
+shape = SubResource("CircleShape2D_4tegy")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(-991, -621)
+rotation = 0.127409
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D5"]
+position = Vector2(2148, 657.25)
+rotation = 0.837758
+scale = Vector2(0.23, 0.392)
+texture = ExtResource("2_mm6rf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+position = Vector2(2136.55, 662.894)
+rotation = 0.120428
+shape = SubResource("CircleShape2D_4tegy")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(-1414, -350)
+rotation = 0.127409
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D6"]
+position = Vector2(2148, 657.25)
+rotation = 0.837758
+scale = Vector2(0.23, 0.392)
+texture = ExtResource("2_mm6rf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+position = Vector2(2132.07, 659.434)
+rotation = 0.120428
+shape = SubResource("CircleShape2D_4tegy")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(-1094, -410)
+rotation = 0.127409
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D4"]
+position = Vector2(2148, 657.25)
+rotation = 0.0436332
+scale = Vector2(0.16, 0.137)
+texture = ExtResource("4_5wbym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+position = Vector2(2142.12, 659.156)
+rotation = 0.120428
+shape = SubResource("CircleShape2D_0mbf8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-76, 443)
+scale = Vector2(1.75784, 2.06805)
+texture = ExtResource("3_vrw3q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

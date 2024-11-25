@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://0kvk4et30c8a"]
+
+[ext_resource type="Script" path="res://scenes/evil_hand.gd" id="1_rv5v0"]
+[ext_resource type="Texture2D" uid="uid://cspub4ktp5qke" path="res://icon.svg" id="2_ijqnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5o6jh"]
+size = Vector2(116, 108)
+
+[node name="evilhand" type="CharacterBody2D"]
+position = Vector2(559, 272)
+script = ExtResource("1_rv5v0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ijqnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_5o6jh")

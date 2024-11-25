@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7q7cutxewfoy"]
+
+[ext_resource type="Texture2D" uid="uid://bv6j2lsmrbtkx" path="res://sprites/pngtree-detailed-shot-textured-wall-surface-up-close-png-image_12333251-1386505213.png" id="1_26f4y"]
+[ext_resource type="Texture2D" uid="uid://dp8351sy6i0si" path="res://scenes/ufhg.png" id="1_c2dnu"]
+[ext_resource type="PackedScene" uid="uid://dykwuxq7x12bi" path="res://scenes/duster.tscn" id="1_qt1s6"]
+[ext_resource type="PackedScene" uid="uid://dybe1o0biuksj" path="res://scenes/pot.tscn" id="2_f1njt"]
+[ext_resource type="PackedScene" uid="uid://cjaw8ep6jg0vq" path="res://scenes/dish.tscn" id="3_flisy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 898.0
+offset_bottom = 618.0
+color = Color(0, 0, 0, 1)
+
+[node name="Pngtree-detailed-shot-textured-wall-surface-up-close-png-image12333251-1386505213" type="Sprite2D" parent="."]
+position = Vector2(335, 352)
+scale = Vector2(1.27022, 1.21111)
+texture = ExtResource("1_26f4y")
+
+[node name="Ufhg" type="Sprite2D" parent="."]
+position = Vector2(497, 1099)
+texture = ExtResource("1_c2dnu")
+
+[node name="Ufhg2" type="Sprite2D" parent="."]
+position = Vector2(372, 241)
+scale = Vector2(0.787109, 0.716981)
+texture = ExtResource("1_c2dnu")
+
+[node name="dish" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_f1njt")]
+position = Vector2(143, 480)
+character = NodePath("../handR")
+
+[node name="dish2" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_f1njt")]
+position = Vector2(523, 259)
+character = NodePath("../handR")
+
+[node name="dish6" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_f1njt")]
+position = Vector2(333, 264)
+character = NodePath("../handR")
+
+[node name="dish3" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_flisy")]
+position = Vector2(345, 482)
+character = NodePath("../handR")
+
+[node name="dish4" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_flisy")]
+position = Vector2(144, 267)
+character = NodePath("../handR")
+
+[node name="dish5" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_flisy")]
+position = Vector2(535, 465)
+character = NodePath("../handR")
+
+[node name="handR" parent="." instance=ExtResource("1_qt1s6")]
+position = Vector2(638, 403)
+scale = Vector2(0.77, 0.77)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(358, 376)
+zoom = Vector2(1.625, 1.625)

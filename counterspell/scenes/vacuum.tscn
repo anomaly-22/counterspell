@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx7tq6o44bls7"]
+
+[ext_resource type="Shader" path="res://vacuum.gdshader" id="1_y645n"]
+[ext_resource type="PackedScene" uid="uid://c07kpd14rtbp7" path="res://scenes/node_2d.tscn" id="2_5todq"]
+[ext_resource type="Texture2D" uid="uid://bky4qewwt5hbu" path="res://scenes/bigstock-Grey-Carpet-Texture-Close-Up-290044018-915933840.jpg" id="2_y6cg7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_42ikd"]
+shader = ExtResource("1_y645n")
+
+[node name="Node2D" type="Node2D"]
+material = SubResource("ShaderMaterial_42ikd")
+
+[node name="Node2D" parent="." instance=ExtResource("2_5todq")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(25, 98.5)
+texture = ExtResource("2_y6cg7")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-132, -130.5)
+scale_amount_min = 42.67
+scale_amount_max = 98.22
+color = Color(0, 0, 0, 1)
